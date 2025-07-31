@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Recommender</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'DM Sans', sans-serif;
+    }
+
+    body {
+      background-color: #f9fafc;
+      color: #1f2a40;
+    }
+
+    nav {
+      padding: 20px;
+      display: flex;
+      justify-content: flex-end;
+      background-color: transparent;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #1f2a40;
+      margin-left: 20px;
+      font-weight: 500;
+    }
+
+    .container {
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .container h1 {
+      font-size: 3em;
+      margin-bottom: 20px;
+    }
+
+    .container p {
+      max-width: 600px;
+      margin: 0 auto 30px;
+      font-size: 1.1em;
+      color: #4a4a4a;
+    }
+
+    .btn {
+      background-color: #1f2a40;
+      color: white;
+      padding: 12px 24px;
+      font-size: 1em;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .illustration {
+      margin-top: 40px;
+    }
+
+    .illustration img {
+      max-width: 400px;
+      width: 100%;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+      color: #999;
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <a href="#">About</a>
+    <a href="#">FAQ</a>
+  </nav>
+
+  <div class="container">
+    <h1>BOOK RECOMMENDER</h1>
+    <p>This is a IBM Watson Based Book Recommendation Chatbot that can recommend the users a specific book depending upon the genre that is provided.</p>
+    <button class="btn">Try it</button>
+
+    <div class="illustration">
+      <img src="images/Screenshot 2025-07-31 204521.png" alt="Reading illustration">
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Book Recommender. Built using IBM Watson.
+  </footer>
+
+  <!-- Watson Assistant Chat Widget -->
+ <script>
+  window.watsonAssistantChatOptions = {
+    integrationID: "704d049c-2294-47bc-a786-0064782ac7b8", // The ID of this integration.
+    region: "jp-tok", // The region your integration is hosted in.
+    serviceInstanceID: "d5e47896-8f32-4b5c-8c53-d196ddf308e0", // The ID of your service instance.
+    onLoad: async (instance) => { await instance.render(); }
+  };
+  setTimeout(function(){
+    const t=document.createElement('script');
+    t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+    document.head.appendChild(t);
+  });
+</script>
+  </script>
+</body>
+
+</html>
+    <link rel="stylesheet" href="book.css">
